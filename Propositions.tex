@@ -1,0 +1,62 @@
+\documentclass[10pt,a4paper]{report}
+% If you write \documentclass[10pt,a4paper,titlepage]{article}, the title will be on a seperate 
+% page, but if you skip 'titlepage' in the command, it will not be on a seperate page.
+
+% use the packages I need:
+\usepackage[english]{babel}            
+\usepackage{amsmath}                  
+\usepackage{amssymb}                    
+\usepackage{epsfig}        
+\usepackage{parskip}
+\usepackage{booktabs}
+\usepackage{gensymb}
+\usepackage{graphicx}
+\usepackage{placeins}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{inputenc}
+\usepackage{braket} 
+\usepackage{slashed} 
+\usepackage{pdfpages} 
+
+% Custom paper size:
+\usepackage{geometry}
+\geometry{papersize={148.0mm,210.0mm}} % absolute paper size.
+\geometry{top=15.0mm}                  % Top marging.
+\geometry{bottom=15.0mm}               % Bottom margin.
+\geometry{left=15.0mm}                 % Left margin.
+\geometry{right=15.0mm}                % Right margin.
+
+% new commands:
+\newcommand{\MeV}[0]{\ \textrm{MeV}}
+\newcommand{\AMeV}[0]{\ \textrm{MeV/u}}
+\newcommand{\keV}[0]{\ \textrm{keV}}
+\newcommand{\AkeV}[0]{\ \textrm{keV/u}}
+\newcommand{\GeV}[0]{\ \textrm{GeV}}
+\newcommand{\AGeV}[0]{\ \textrm{GeV/u}}
+\newcommand{\eV}[0]{\ \textrm{eV}}
+\newcommand{\AeV}[0]{\ \textrm{eV/u}}
+\newcommand{\mgcm}[0]{\ \textrm{mg} / \textrm{cm} ^{2}}
+\newcommand{\cel}[0]{\ \degree \textrm{C}}
+\newcommand{\parincl}{\mathbin{\!/\mkern-5mu/\!}}
+\newcommand{\optcoeff}[2]{ ( #1 | #2 ) }
+\newcommand{\whitez}[0]{\textcolor{white}{0}}
+
+% Get right fonts of paragraphs:
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{10pt}
+\setlength{\belowcaptionskip}{5pt}
+\setlength{\abovecaptionskip}{5pt}
+
+\renewcommand{\floatpagefraction}{.8}
+%\renewcommand{\topfraction}{.9}
+%\renewcommand{\bottomfraction}{.1}
+%\renewcommand{\textfraction}{.01}
+
+\begin{document}
+
+\pagenumbering{gobble}
+
+\input{./Tex/Propositions}
+
+\end{document}

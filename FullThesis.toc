@@ -1,0 +1,11 @@
+\babel@toc {english}{}
+\contentsline {chapter}{\numberline {1}An example of a chapter}{1}
+\contentsline {section}{\numberline {1.1}The first section...}{1}
+\contentsline {chapter}{English Summary}{2}
+\contentsline {section}{\numberline {1}Introduction}{2}
+\contentsline {chapter}{Nederlandse Samenvatting}{3}
+\contentsline {section}{\numberline {1}Inleiding}{3}
+\contentsline {chapter}{Acknowledgements}{4}
+\contentsline {chapter}{List of Figures}{5}
+\contentsline {chapter}{List of Tables}{6}
+\contentsline {chapter}{Bibliography}{7}

@@ -1,0 +1,4 @@
+\babel@toc {english}{}
+\contentsline {chapter}{Nederlandse Samenvatting}{2}
+\contentsline {section}{\numberline {1}Inleiding}{2}
+\contentsline {chapter}{Bibliografie}{3}

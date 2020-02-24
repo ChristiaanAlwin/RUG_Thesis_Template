@@ -1,0 +1,133 @@
+\documentclass[10pt,a4paper]{report}
+
+% use the packages I need:
+\usepackage[english]{babel}             
+\usepackage{amsmath}                  
+\usepackage{amssymb}                     
+\usepackage{epsfig} 
+\usepackage{parskip}
+\usepackage{booktabs}
+\usepackage{gensymb}
+\usepackage{graphicx} 
+\usepackage{placeins}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{inputenc}
+\usepackage{braket} 
+\usepackage{slashed} 
+\usepackage{pdfpages}
+\usepackage{enumitem} 
+
+% Define code listings:
+\usepackage{listings}
+\lstset {
+    language=C++,
+    backgroundcolor=\color{black!5}, % set backgroundcolor
+    basicstyle=\footnotesize,% basic font setting
+}
+
+% Define our own chapter titles:
+\usepackage{titlesec}
+\titleformat{\chapter}[hang]{\normalfont\raggedright\Huge\bfseries}{\thechapter ~~}{0pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{-40pt}{20pt}
+\titlespacing*{\section}{0pt}{15pt}{0pt}
+\titlespacing*{\subsection}{0pt}{5pt}{0pt}
+
+% Define your own paper size:
+\usepackage{geometry}
+\geometry{papersize={170.0mm,240.0mm}} % absolute paper size.
+\geometry{top=28.0mm}                  % Top marging.
+\geometry{bottom=20.0mm}               % Bottom margin.
+\geometry{left=20.0mm}                 % Left margin.
+\geometry{right=20.0mm}                % Right margin.
+
+% Headers & Layout:
+\geometry{twoside}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\sectionmark}[1]{\markright{Sectie \thesection}}
+\renewcommand{\chaptermark}[1]{\markboth{Hoofdstuk \thechapter: #1}{}}
+\fancyhead[LO,RE]{\normalsize{\rightmark}}
+\fancyhead[LE,RO]{\normalsize{\leftmark}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\headsep}{5.0mm}
+\setlength{\footskip}{10.0mm}
+
+% new commands:
+\newcommand{\MeV}[0]{\ \textrm{MeV}}
+\newcommand{\AMeV}[0]{\ \textrm{MeV/u}}
+\newcommand{\keV}[0]{\ \textrm{keV}}
+\newcommand{\AkeV}[0]{\ \textrm{keV/u}}
+\newcommand{\GeV}[0]{\ \textrm{GeV}}
+\newcommand{\AGeV}[0]{\ \textrm{GeV/u}}
+\newcommand{\eV}[0]{\ \textrm{eV}}
+\newcommand{\AeV}[0]{\ \textrm{eV/u}}
+\newcommand{\mgcm}[0]{\ \textrm{mg} / \textrm{cm} ^{2}}
+\newcommand{\cel}[0]{\ \degree \textrm{C}}
+\newcommand{\parincl}{\mathbin{\!/\mkern-5mu/\!}}
+\newcommand{\optcoeff}[2]{ ( #1 | #2 ) }
+\newcommand{\whitez}[0]{\textcolor{white}{0}}
+
+% Get right fonts of paragraphs:
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{10pt}
+\setlength{\belowcaptionskip}{5pt}
+\setlength{\abovecaptionskip}{5pt}
+
+% Manage floats:
+\renewcommand{\floatpagefraction}{.8}
+%\renewcommand{\topfraction}{.9}
+%\renewcommand{\bottomfraction}{.1}
+%\renewcommand{\textfraction}{.01}
+
+% Define our own text colors:
+\definecolor{SomeColorYouNeed}{rgb}{0.8,0.7,0.1}
+
+% Supervisor comments...
+\definecolor{Nasser}{rgb}{0.0,0.0,0.0}
+\definecolor{Julia}{rgb}{0.0,0.0,0.0}
+
+% Manage our bibliography:
+\usepackage[square,comma,numbers,sort&compress]{natbib}
+\usepackage{notoccite}
+\bibliographystyle{ieeetr} 
+\usepackage[nottoc,notlot,notlof]{tocbibind} % Disables inclusion of table of contents, figures, tables in the contents.
+\usepackage{tocstyle} % Saves Table of Contents, etc. if this is loaded AFTER notoccite.
+\usetocstyle{standard}
+
+% Give input for LaTeX title page:
+\title{Title of your PhD thesis goes here...}
+\author{Ali Mollaebrahimi} 
+
+% Start the document:
+\begin{document} 
+
+% Import our own title page & do NOT make one with LaTeX:
+\begin{titlepage}
+ \includepdf[pages={1}]{DutchSumTitle.pdf}
+\end{titlepage}
+
+% Switch off page numbers for the time being:
+\pagenumbering{gobble}
+
+% Build table of contents:
+\renewcommand{\contentsname}{Inhoudsopgave} 
+\tableofcontents
+
+% Switch page numbers on again: 
+\pagenumbering{arabic}
+\renewcommand{\figurename}{Figuur} 
+\input{./Tex/Nederlands}
+
+% Input the bibliography
+\clearpage 
+\fancyhead[LE,RO]{\normalsize{BIBLIOGRAFIE}}
+\fancyhead[LO,RE]{\normalsize{BIBLIOGRAFIE}}
+\renewcommand\bibname{Bibliografie}
+\bibliography{References}
+
+% End the document:
+\end{document}
