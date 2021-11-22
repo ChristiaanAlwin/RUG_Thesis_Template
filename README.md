@@ -1,8 +1,8 @@
 # RUG_Thesis_Template
 LaTeX Template for witing a PhD Thesis according to the rules of the University of Groningen
 
-This is all teh LaTeX code needed to write a PhD thesis according to the rules of the 
-University of Groningen. The Cover can be designed freely with PowwerPoint, although the 
+This is all the LaTeX code needed to write a PhD thesis according to the rules of the 
+University of Groningen. The Cover can be designed freely with PowerPoint, although the 
 thickness of the book has to be adapted to the number of pages of your thesis (current
 size is 204 pages). The given slide size corresponds to the printing format of
 Cpoy 76, Zonnelaan 86, 9742 BN Groningen.
